@@ -1,0 +1,75 @@
+// Core CSS
+// @import "reset";
+
+.h1 {
+    // color: red;
+}
+
+.sun-block{
+    max-width: 322px;
+    position: relative;
+    &-part{
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+.light{
+    animation: light-opacity 4s infinite;
+}
+
+
+@keyframes light-opacity {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+
+.rays-short{
+    animation: rays-short 2s infinite;
+}
+
+@keyframes rays-short {
+    0% {
+        transform: scale(0.99)
+    }
+    50% {
+        transform: scale(0.95)
+    }
+    100% {
+        transform: scale(0.99)
+    }
+
+  }
+
+
+  
+.rays-long{
+    animation: rays-long 1.5s infinite;
+}
+
+@keyframes rays-long {
+    0% {
+        transform: scale(0.99)
+    }
+    50% {
+        transform: scale(0.82)
+    }
+    100% {
+        transform: scale(0.99)
+    }
+
+  }
