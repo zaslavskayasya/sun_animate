@@ -7,6 +7,9 @@
 
 .sun-block{
     max-width: 322px;
+    width: 322px;
+    height: 322px;
+    overflow: hidden;
     position: relative;
     &-part{
         max-width: 100%;
@@ -18,6 +21,8 @@
         }
     }
 }
+
+
 
 
 .light{
@@ -38,19 +43,37 @@
 }
 
 
-.rays-short{
-    animation: rays-short 2s infinite;
+.rays-rotate{
+    animation: rotate 19s infinite;
 }
+
+.rays-short{
+    animation: rays-short 3s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform:  rotate(0deg)
+
+    }
+    50% {
+        transform:  rotate(180deg)
+    }
+    100% {
+        transform:  rotate(360deg)
+    }
+
+  }
 
 @keyframes rays-short {
     0% {
-        transform: scale(0.99)
+        transform: scale(0.99) 
     }
     50% {
-        transform: scale(0.95)
+        transform: scale(0.85) 
     }
     100% {
-        transform: scale(0.99)
+        transform: scale(0.99) 
     }
 
   }
@@ -58,18 +81,22 @@
 
   
 .rays-long{
-    animation: rays-long 1.5s infinite;
+    animation: rays-long 3s infinite;
 }
 
 @keyframes rays-long {
     0% {
-        transform: scale(0.99)
+        transform: scale(0.99) 
     }
     50% {
-        transform: scale(0.82)
+        transform: scale(0.82) 
     }
     100% {
-        transform: scale(0.99)
+        transform: scale(0.99) 
     }
 
+  }
+
+  .center {
+    animation: rotate 22s infinite;
   }

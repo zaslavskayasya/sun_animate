@@ -1,5 +1,8 @@
 .sun-block {
   max-width: 322px;
+  width: 322px;
+  height: 322px;
+  overflow: hidden;
   position: relative;
 }
 .sun-block-part {
@@ -40,34 +43,67 @@
     opacity: 1;
   }
 }
-.rays-short {
-  -webkit-animation: rays-short 2s infinite;
-          animation: rays-short 2s infinite;
+.rays-rotate {
+  -webkit-animation: rotate 19s infinite;
+          animation: rotate 19s infinite;
 }
 
+.rays-short {
+  -webkit-animation: rays-short 3s infinite;
+          animation: rays-short 3s infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes rays-short {
   0% {
     -webkit-transform: scale(0.99);
             transform: scale(0.99);
   }
   50% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
     -webkit-transform: scale(0.99);
             transform: scale(0.99);
   }
 }
-
 @keyframes rays-short {
   0% {
     -webkit-transform: scale(0.99);
             transform: scale(0.99);
   }
   50% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
     -webkit-transform: scale(0.99);
@@ -75,8 +111,8 @@
   }
 }
 .rays-long {
-  -webkit-animation: rays-long 1.5s infinite;
-          animation: rays-long 1.5s infinite;
+  -webkit-animation: rays-long 3s infinite;
+          animation: rays-long 3s infinite;
 }
 
 @-webkit-keyframes rays-long {
@@ -107,4 +143,8 @@
     -webkit-transform: scale(0.99);
             transform: scale(0.99);
   }
+}
+.center {
+  -webkit-animation: rotate 22s infinite;
+          animation: rotate 22s infinite;
 }
