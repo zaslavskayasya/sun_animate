@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>sun animate</title>
+	<title>Stage1</title>
 	<link href="images/favicon.ico" rel="icon" />
 	<meta http-equiv="cache-control" content="no-cache" />
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
@@ -12,13 +12,23 @@
 
 </head>
 
-<body >
+<body>
 	
-<div id="content" >
-	<h1 class="h1">
-			SUN ANIMATION
-	</h1>
-	<div class="sun-block sun-animate">
+<div class="scene_1" >
+    <div class="clouds_aback">
+        <div class="cload_back"> 
+            <img class="cload1" src="images/cloud1.png" alt="">
+        </div>
+        <div class="cload_back"> 
+            <img class="cload2" src="images/cloud3.png" alt="">
+        </div>
+    </div>
+
+    <div class="moon_wrap ">
+        <img class="moon_img" src="images/moon.png" alt="">
+    </div>
+
+    <div class="sun-block sun-animate">
 		<div class=" sun-block-part light">
 			<img src="images/light.png" alt="">
 		</div>
@@ -32,7 +42,40 @@
 			<img src="images/center.png" alt="">
 		</div>
 	</div>
+
+	
+    <div class="clouds_front">
+        <div class="cload_back"> 
+            <img class="cload3" src="images/cloud5.png" alt="">
+        </div>
+        <div class="cload_back"> 
+            <img class="cload4" src="images/cloud4.png" alt="">
+        </div>
+    </div>
 </div>
+
+<script>
+
+    // Запуск Луны
+    function moon_down_activate() {
+        let moon = document.querySelector(".moon_wrap");
+        moon.classList.add("moon_down");
+
+    }
+
+    // Запуск Солнца
+    function sun_up_activate() {
+        let sun = document.querySelector(".sun-block");
+        sun.classList.add("sun_up");
+
+    }
+
+    setTimeout(moon_down_activate, 500); 
+    setTimeout(sun_up_activate, 500); 
+
+
+
+</script>    
 
 </body>
 </html>
