@@ -1,9 +1,8 @@
-// Core CSS
-// @import "reset";
-
-.h1 {
-    // color: red;
+body{ 
+    padding: 0px;
+    margin: 0px;
 }
+
 
 .sun-block{
     max-width: 322px;
@@ -22,13 +21,9 @@
     }
 }
 
-
-
-
 .light{
     animation: light-opacity 4s infinite;
 }
-
 
 @keyframes light-opacity {
     0% {
@@ -41,7 +36,6 @@
         opacity: 1
     }
 }
-
 
 .rays-rotate{
     animation: rotate 19s infinite;
@@ -100,3 +94,109 @@
   .center {
     animation: rotate 22s infinite;
   }
+
+
+
+// scene1 
+.scene_1 {
+    background: url(../images/BG.jpg);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.moon_wrap{
+    width: 263px;
+    height: 230px;
+    position: absolute;
+    left: 50%;
+    top:0%;
+    transform: translateX(-50%) translateY(-1750%);
+    transition: all ease 2s;
+    img {
+        width: 100%;
+    }
+
+}
+.moon_wrap.moon_down{
+    transition: all ease 2s;
+    transform: translateX(-50%) translateY(10%);
+}
+
+.sun-block{
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    bottom:0%;
+    transform: translateX(-50%) translateY(1750%);
+    transition: all ease 5s;
+
+}
+
+.sun-block.sun_up{
+    transition: all ease 4s;
+    transform: translateX(-50%) translateY(10%);
+}
+
+.cload_back{
+    position: absolute;
+}
+
+.cload1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation: cload_move2 20s infinite;
+}
+
+.cload2{
+    position: absolute;
+    bottom: -299px;
+    left: -300px;
+    animation: cload_move 19s infinite;
+}
+
+
+@keyframes cload_move {
+    0% {
+        transform: translateX(0%)
+    }
+    50% {
+        transform: translateX(20%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes cload_move2 {
+    0% {
+        transform: translateX(0%)
+    }
+    50% {
+        transform: translateX(-20%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+.cload3{
+    position: absolute;
+    bottom: -0px;
+    right: -300px;
+    animation: cload_move2 19s infinite;
+    z-index: 9;
+}
+.cload4{
+    position: absolute;
+    bottom: -299px;
+    right: -300px;
+    animation: cload_move2 19s infinite;
+    z-index: 9;
+}
