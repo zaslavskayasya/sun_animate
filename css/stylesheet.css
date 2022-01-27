@@ -9,7 +9,7 @@ body {
   font-style: normal;
   font-weight: 400;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("AmericanText"), url("/fonts/AmericanText.woff2") format("woff2"), url("/fonts/AmericanText.woff") format("woff");
+  src: local("AmericanText"), url("./fonts/AmericanText.woff2") format("woff2"), url("./fonts/AmericanText.woff") format("woff");
 }
 .sun-block {
   max-width: 322px;
