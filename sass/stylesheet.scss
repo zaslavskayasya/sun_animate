@@ -10,9 +10,9 @@ body{
     /* Браузер сначала попробует найти шрифт локально */
     src: local("AmericanText"),
          /* Если не получилось, загрузит woff2 */
-         url("./fonts/AmericanText.woff2") format("woff2"),
+         url("./../fonts/AmericanText.woff2") format("woff2"),
          /* Если браузер не поддерживает woff2, загрузит woff */
-         url("./fonts/AmericanText.woff") format("woff");
+         url("./../fonts/AmericanText.woff") format("woff");
   }
 
 // ------------ sun  part ----------
