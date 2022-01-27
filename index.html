@@ -6,8 +6,13 @@
 	<title>Stage1</title>
 	<link href="images/favicon.ico" rel="icon" />
 	<meta http-equiv="cache-control" content="no-cache" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-	<!-- Stylesheet
+	
+    <!-- Stylesheet
 ========================= -->
 
 </head>
@@ -15,19 +20,29 @@
 <body>
 	
 <div class="scene_1" >
-    <div class="clouds_aback">
+    <!-- Cloud back -->
+    <div class="clouds_back">
         <div class="cload_back"> 
-            <img class="cload1" src="images/cloud1.png" alt="">
-        </div>
-        <div class="cload_back"> 
-            <img class="cload2" src="images/cloud3.png" alt="">
-        </div>
+            <img class="cload1" src="images/cloudsBack1.png" alt="">
+        </div>       
     </div>
 
+     <!-- moon -->
     <div class="moon_wrap ">
         <img class="moon_img" src="images/moon.png" alt="">
     </div>
 
+    <!-- arrow-->
+
+    <div class="arrow-top-wrap"> 
+        <img src="images/arrow-down.png" alt="" class="arrow-top">
+    </div>
+
+    <div class="arrow-down-wrap"> 
+        <img src="images/arrow-up.png" alt="" class="arrow-down">
+    </div>
+
+    <!-- sun -->
     <div class="sun-block sun-animate">
 		<div class=" sun-block-part light">
 			<img src="images/light.png" alt="">
@@ -43,39 +58,92 @@
 		</div>
 	</div>
 
-	
+    <!-- cloud -->
     <div class="clouds_front">
         <div class="cload_back"> 
-            <img class="cload3" src="images/cloud5.png" alt="">
-        </div>
-        <div class="cload_back"> 
-            <img class="cload4" src="images/cloud4.png" alt="">
-        </div>
+            <img class="cload3" src="images/cloudsFront2.png" alt="">
+        </div>       
     </div>
+
+    <a  href="#" class="skip">
+        skip
+    </a> 
+
+    <p   id="typo_text" class="logo-link"></p>
+               
 </div>
 
 <script>
 
     // Запуск Луны
+    let moon = document.querySelector(".moon_wrap");
     function moon_down_activate() {
-        let moon = document.querySelector(".moon_wrap");
         moon.classList.add("moon_down");
 
     }
 
     // Запуск Солнца
+    let sun = document.querySelector(".sun-block");
     function sun_up_activate() {
-        let sun = document.querySelector(".sun-block");
         sun.classList.add("sun_up");
 
     }
 
+    // Рисование стрелки вниз
+    let line = document.querySelector(".arrow-top-wrap");
+    function draw_line() {
+        line.classList.add("draw");
+    }
+
+    // Рисование стрелки вниз
+    let line2 = document.querySelector(".arrow-down-wrap");
+    function draw_line2() {
+        line2.classList.add("draw");
+    }
+
+    
     setTimeout(moon_down_activate, 500); 
     setTimeout(sun_up_activate, 500); 
+
+    setTimeout(draw_line, 600);
+    setTimeout(draw_line2, 600);
+
+
+    let i = 0;
+    let txt = 'Celestial'; /* Текст */
+    let speed = 80; /* Скорость/длительность эффекта в миллисекундах */
+
+    function typeWriter() {
+    if (i < txt.length) {
+            document.getElementById("typo_text").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    setTimeout(typeWriter, 4800);
+
+    let startConnectTrigger = document.getElementById("typo_text");
+
+
+    startConnectTrigger.addEventListener("click", function(){
+        console.log('startAnimation');
+        // txt.classList.add("test");
+        // txt.classList.add("hide_this_soft");  
+        moon.classList.add("moon_center");
+        sun.classList.add("sun_center");    
+        startConnectTrigger.classList.add("hide_this_soft");  
+        line.classList.add("hide_this_soft"); 
+        line2.classList.add("hide_this_soft");   
+
+    } )
+
 
 
 
 </script>    
+
+
 
 </body>
 </html>

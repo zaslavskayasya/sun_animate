@@ -3,6 +3,19 @@ body{
     margin: 0px;
 }
 
+@font-face {
+    font-family: "AmericanText";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("AmericanText"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/AmericanText.woff2") format("woff2"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("/fonts/AmericanText.woff") format("woff");
+  }
+
+// ------------ sun  part ----------
 
 .sun-block{
     max-width: 322px;
@@ -72,7 +85,6 @@ body{
 
   }
 
-
   
 .rays-long{
     animation: rays-long 3s infinite;
@@ -96,6 +108,31 @@ body{
   }
 
 
+.sun-block{
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    bottom:0%;
+    transform: translateX(-50%) translateY(1750%);
+    transition: all ease 3s;
+
+}
+
+.sun-block.sun_up{
+    transition: all ease 3s;
+    transform: translateX(-50%) translateY(10%);
+}
+
+.sun-block.sun_up.sun_center{
+    bottom: 16%;
+    z-index: 5;
+    transition: all ease 1s;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
 
 // scene1 
 .scene_1 {
@@ -110,6 +147,8 @@ body{
 }
 
 
+//-------- moon ----------
+
 .moon_wrap{
     width: 263px;
     height: 230px;
@@ -117,59 +156,63 @@ body{
     left: 50%;
     top:0%;
     transform: translateX(-50%) translateY(-1750%);
-    transition: all ease 2s;
+    transition: all ease 3s;
     img {
         width: 100%;
     }
 
 }
 .moon_wrap.moon_down{
-    transition: all ease 2s;
+    transition: all ease 3s;
     transform: translateX(-50%) translateY(10%);
 }
 
-.sun-block{
-    position: absolute;
-    position: absolute;
-    left: 50%;
-    bottom:0%;
-    transform: translateX(-50%) translateY(1750%);
-    transition: all ease 5s;
 
+.moon_img{
+    animation: moon 19s infinite;
 }
 
-.sun-block.sun_up{
-    transition: all ease 4s;
-    transform: translateX(-50%) translateY(10%);
+@keyframes moon {
+    0% {
+        transform: scale(1) rotate(0deg)
+    }
+    50% {
+        transform: scale(1.1) rotate(15deg)
+
+    }
+    100% {
+        transform: scale(1) rotate(0deg)
+
+    }
 }
 
-.cload_back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.moon_wrap.moon_down.moon_center{ 
+    top: 50%;
+    z-index: 6;
+    transition: all ease 1s;
+    transform: translateX(-50%) translateY(-50%);
 }
+
+
+
+// --------- cloads ----------
 
 .cload1{
     position: absolute;
+    width: auto;
     left: 0px;
     top: 0px;
+    height: 100vh;
     animation: cload_move2 20s infinite;
+ 
 }
-
-.cload2{
-    position: absolute;
-    bottom: -299px;
-    left: -300px;
-    animation: cload_move 19s infinite;
-}
-
 
 @keyframes cload_move {
     0% {
         transform: translateX(0%)
     }
     50% {
-        transform: translateX(20%)
+        transform: translateX(2%)
     }
     100% {
         transform: translateX(0%)
@@ -181,24 +224,161 @@ body{
         transform: translateX(0%)
     }
     50% {
-        transform: translateX(-20%)
+        transform: translateX(-2%)
     }
     100% {
         transform: translateX(0%)
     }
 }
 
+.clouds_front{
+    pointer-events: none;
+}
+.clouds_back{
+    pointer-events: none;
+}
+
 .cload3{
     position: absolute;
-    top: -500px;
-    right: -300px;
-    animation: cload_move2 49s infinite;
-    z-index: 9;
+    top: 0px;
+    left: -150px;
+    width: auto;
+    height: 100vh;
+    animation: cload_move 9s infinite;
+  
 }
-.cload4{
+
+// -------------- arrows  -----------
+
+
+
+.arrow-top-wrap{
     position: absolute;
-    bottom: -299px;
-    right: -300px;
-    animation: cload_move2 39s infinite;
-    z-index: 9;
+    top: 0px;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    max-width: 133px;
+    overflow: hidden;
+    height: 0px;
+    img{
+        width: 100%;
+    }
+}
+
+.arrow-top-wrap.draw{
+    height: 150px;
+    transition: all ease-in-out 1s 3s;
+}
+
+
+
+
+.arrow-down-wrap{
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    max-width: 168px;
+    overflow: hidden;
+    height: 0px;
+    img{
+        width: 100%;
+    }
+}
+
+.arrow-down-wrap.draw{
+    height: 150px;
+    transition: all ease-in-out 1s 3s;
+}
+
+
+.arrow-top{
+    animation: up_down 3s infinite;
+}
+
+.arrow-down{
+    animation: up_down 3s 1.5s infinite;
+
+}
+
+
+
+@keyframes up_down {
+    0% {
+        transform: translateX(0%)
+    }
+    50% {
+        transform: translateY(-15%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+
+/// ---------- texts main screen ----------
+
+.skip {
+    position: absolute;
+    top: 40px;
+    right:52px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: none;
+    /* identical to box height */
+    text-align: right;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #101010;
+    opacity: 0.5;
+    z-index: 999;
+    transition: all ease-in-out 0.3s;
+    &:hover{
+        color: #000;
+        opacity: 1;
+    }
+
+}
+
+
+.logo-link{
+    font-family: "AmericanText", "Arial", sans-serif;
+    position: absolute;
+    top:46%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 46px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    // opacity:0 ;
+   
+    text-shadow: 0px 0px 32px rgba(87, 80, 69, 0.12), 0px 0px 24px rgba(87, 80, 69, 0.08), 0px 0px 8px rgba(87, 80, 69, 0.08), 0px 0px 1px rgba(87, 80, 69, 0.1);
+    // animation: from_opacity  2s 3.5s forwards  ;
+}
+
+@keyframes from_opacity {
+    0% {
+         opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hide_this_soft{
+    opacity: 0;
+    pointer-events: none; 
+    display: none;;   
 }
