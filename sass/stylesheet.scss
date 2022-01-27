@@ -100,7 +100,6 @@ body{
     100% {
         transform: scale(0.99) 
     }
-
   }
 
   .center {
@@ -115,7 +114,6 @@ body{
     bottom:0%;
     transform: translateX(-50%) translateY(1750%);
     transition: all ease 3s;
-
 }
 
 .sun-block.sun_up{
@@ -129,9 +127,6 @@ body{
     transition: all ease 1s;
     transform: translateX(-50%) translateY(-50%);
 }
-
-
-
 
 
 // scene1 
@@ -154,8 +149,8 @@ body{
     height: 230px;
     position: absolute;
     left: 50%;
-    top:0%;
-    transform: translateX(-50%) translateY(-1750%);
+    top: 0%;
+    transform: translateX(-52%) translateY(-1750%);
     transition: all ease 3s;
     img {
         width: 100%;
@@ -200,7 +195,7 @@ body{
 .cload1{
     position: absolute;
     width: auto;
-    left: 0px;
+    left: -150px;
     top: 0px;
     height: 100vh;
     animation: cload_move2 20s infinite;
