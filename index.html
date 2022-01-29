@@ -23,7 +23,29 @@
     <!-- Cloud back -->
     <div class="clouds_back">
         <div class="cload_back"> 
-            <img class="cload1" src="images/cloudsBack1.png" alt="">
+
+            <picture>
+                <source class="cload1"
+                  srcset="images/cloudsBack1.png"
+                  media="(min-width: 860px)"
+                />             
+                <img  class="cload1"
+                  src="images/clouds_mobile_top.png" 
+                  alt="Baby Sleeping"
+                />
+              </picture>
+
+            <!-- <img class="cload1" src="images/cloudsBack1.png" alt=""> -->
+           
+            <!-- <img class="cload1" srcset="images/cloads_mobile_top.png 320w,
+            images/cloudsBack1.png 480w,
+            images/cloudsBack1.png 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="images/cloudsBack1.png" alt="cloads"> -->
+
+
         </div>       
     </div>
 
@@ -47,11 +69,8 @@
 		<div class=" sun-block-part light">
 			<img src="images/light.png" alt="">
 		</div>
-			<div class=" sun-block-part rays-rotate">
-				<img class="  rays-short  sun-elems" src="images/rays_short.png" alt="">
-			</div>
 			<div class=" sun-block-part rays-rotate ">
-				<img class="rays-long sun-elems" src="images/rays_long.png" alt="">
+				<img class="rays-long sun-elems" src="images/raysall.png" alt="">
 			</div>		
 		<div class="sun-block-part center">
 			<img src="images/center.png" alt="">
@@ -62,6 +81,19 @@
     <div class="clouds_front">
         <div class="cload_back"> 
             <img class="cload3" src="images/cloudsFront2.png" alt="">
+
+            <picture>
+                <source class="cload3"
+                  srcset="images/cloudsFront2.png"
+                  media="(min-width: 860px)"
+                />             
+                <img  class="cload3"
+                  src="images/clouds_mobile_bottom.png" 
+                  alt="alt"
+                />
+            </picture>
+
+
         </div>       
     </div>
 
