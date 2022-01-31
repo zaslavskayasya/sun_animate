@@ -563,11 +563,13 @@ body {
     left: 50%;
     top: 30%;
     max-width: 133px;
+    pointer-events: none;
   }
 
   .arrow-down-wrap {
     max-width: 90px;
     bottom: 20%;
+    pointer-events: none;
   }
 
   .moon_wrap {
@@ -581,6 +583,10 @@ body {
     max-width: 322px;
     width: 270px;
     height: 270px;
+  }
+
+  .sun-block.sun_up.sun_center {
+    bottom: 23%;
   }
 }
 @media screen and (max-height: 860px) {
@@ -630,5 +636,11 @@ body {
     width: 100%;
     top: auto;
     z-index: 1;
+  }
+}
+@media screen and (max-height: 707px) {
+  .sun-block.sun_up.sun_center {
+    bottom: auto;
+    top: 45%;
   }
 }
