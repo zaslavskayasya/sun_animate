@@ -35,17 +35,6 @@
                 />
               </picture>
 
-            <!-- <img class="cload1" src="images/cloudsBack1.png" alt=""> -->
-           
-            <!-- <img class="cload1" srcset="images/cloads_mobile_top.png 320w,
-            images/cloudsBack1.png 480w,
-            images/cloudsBack1.png 800w"
-     sizes="(max-width: 320px) 280px,
-            (max-width: 480px) 440px,
-            800px"
-     src="images/cloudsBack1.png" alt="cloads"> -->
-
-
         </div>       
     </div>
 
@@ -76,6 +65,11 @@
 			<img src="images/center.png" alt="">
 		</div>
 	</div>
+
+    <div class="extra-light" id="extra-light">
+        <img src="images/shine.png" alt="">
+
+    </div>
 
     <!-- cloud -->
     <div class="clouds_front">
@@ -157,6 +151,7 @@
 
     let startConnectTrigger = document.getElementById("typo_text");
 
+    let shine = document.getElementById("extra-light");
 
     startConnectTrigger.addEventListener("click", function(){
         console.log('startAnimation');
@@ -167,6 +162,8 @@
         startConnectTrigger.classList.add("hide_this_soft");  
         line.classList.add("hide_this_soft"); 
         line2.classList.add("hide_this_soft");   
+        shine.classList.add("visible");
+
 
     } )
 

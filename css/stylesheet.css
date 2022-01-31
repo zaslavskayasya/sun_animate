@@ -502,6 +502,61 @@ body {
   display: none;
 }
 
+.extra-light {
+  width: 263px;
+  height: 230px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  z-index: 10;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 20;
+}
+.extra-light img {
+  width: 100%;
+}
+
+.extra-light.visible {
+  -webkit-animation: animateLight 2s 2s forwards;
+          animation: animateLight 2s 2s forwards;
+}
+@-webkit-keyframes animateLight {
+  0% {
+    width: 263px;
+    height: 230px;
+    opacity: 1;
+  }
+  99% {
+    width: 963px;
+    height: 930px;
+    opacity: 1;
+  }
+  100% {
+    width: 1063px;
+    height: 1030px;
+    opacity: 0;
+  }
+}
+@keyframes animateLight {
+  0% {
+    width: 263px;
+    height: 230px;
+    opacity: 1;
+  }
+  99% {
+    width: 963px;
+    height: 930px;
+    opacity: 1;
+  }
+  100% {
+    width: 1063px;
+    height: 1030px;
+    opacity: 0;
+  }
+}
 @media screen and (max-height: 860px) {
   .arrow-top-wrap {
     width: 50px;

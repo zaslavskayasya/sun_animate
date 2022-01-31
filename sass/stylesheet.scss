@@ -382,6 +382,54 @@ body{
 }
 
 
+.extra-light{
+    width: 263px;
+    height: 230px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    // background: #ffff;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 20;
+    img{
+        width: 100%;
+    }
+}
+
+
+//// LIGHT
+
+.extra-light.visible{
+    
+    animation: animateLight 2s 2s forwards;
+    
+    img{
+        // transition: all ease-in-out 0.3s 1s;        
+    }
+}
+
+@keyframes animateLight {
+    0% {
+        width: 263px;
+        height: 230px;
+        opacity:1;
+    }
+    99% {
+        width: 963px;
+        height: 930px;
+        opacity:1;
+    }
+    100% {
+        width: 1063px;
+        height: 1030px;
+        opacity:0;
+    }
+}
+
+
 // --------- HEIGHT ADAPTIVE  --------------
 
 
