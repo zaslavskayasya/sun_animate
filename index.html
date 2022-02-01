@@ -95,7 +95,7 @@
         skip
     </a> 
 
-    <p   id="typo_text" class="logo-link"></p>
+    <p   id="typo_text" class="logo-link">Celestial</p>
                
 </div>
 
@@ -127,27 +127,38 @@
         line2.classList.add("draw");
     }
 
-    
+
+
+    // Логотип
+
+    let logo = document.querySelector(".logo-link");
+    function logoShow() {
+        logo.classList.add("active");
+    }
+
+   
     setTimeout(moon_down_activate, 500); 
     setTimeout(sun_up_activate, 500); 
 
     setTimeout(draw_line, 600);
     setTimeout(draw_line2, 600);
 
+    setTimeout(logoShow, 600);
 
-    let i = 0;
-    let txt = 'Celestial'; /* Текст */
-    let speed = 80; /* Скорость/длительность эффекта в миллисекундах */
 
-    function typeWriter() {
-    if (i < txt.length) {
-            document.getElementById("typo_text").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
+    // let i = 0;
+    // let txt = 'Celestial'; /* Текст */
+    // let speed = 80; /* Скорость/длительность эффекта в миллисекундах */
 
-    setTimeout(typeWriter, 4800);
+    // function typeWriter() {
+    // if (i < txt.length) {
+    //         document.getElementById("typo_text").innerHTML += txt.charAt(i);
+    //         i++;
+    //         setTimeout(typeWriter, speed);
+    //     }
+    // }
+
+    // setTimeout(typeWriter, 4800);
 
     let startConnectTrigger = document.getElementById("typo_text");
 
@@ -163,6 +174,7 @@
         line.classList.add("hide_this_soft"); 
         line2.classList.add("hide_this_soft");   
         shine.classList.add("visible");
+       
 
 
     } )
