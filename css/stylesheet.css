@@ -655,6 +655,10 @@ body {
     top: auto;
     z-index: 1;
   }
+
+  .extra-light {
+    top: 45%;
+  }
 }
 @media screen and (max-height: 707px) {
   .sun-block.sun_up.sun_center {
