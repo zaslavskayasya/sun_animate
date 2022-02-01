@@ -633,18 +633,15 @@ body {
 
   .cload1 {
     right: 0%;
-    top: -10%;
-    height: auto;
     z-index: 0;
-    width: 100%;
+    width: 130%;
   }
 
   .cload3 {
     right: 0%;
-    height: auto;
     z-index: 0;
     bottom: -20px;
-    width: 100%;
+    width: 130%;
     top: auto;
     z-index: 1;
   }
@@ -653,5 +650,14 @@ body {
   .sun-block.sun_up.sun_center {
     bottom: auto;
     top: 45%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .cload1 {
+    width: 140%;
+  }
+
+  .cload3 {
+    width: 140%;
   }
 }
