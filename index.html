@@ -39,12 +39,12 @@
     </div>
 
      <!-- moon -->
-    <div class="moon_wrap ">
-        <img class="moon_img" src="images/moon.png" alt="">
+    <div id="moonWrap">
+        <div class="moon_wrap ">
+            <img class="moon_img" src="images/moon.png" alt="">
+        </div>
     </div>
-
     <!-- arrow-->
-
     <div class="arrow-top-wrap"> 
         <img src="images/arrow-down.png" alt="" class="arrow-top">
     </div>
@@ -144,6 +144,54 @@
     setTimeout(draw_line2, 600);
 
     setTimeout(logoShow, 600);
+
+
+    // var moonWrap = document.getElementById('moonWrap');
+
+    // moonWrap.onmousedown = function(e) {
+
+    // var coords = getCoords(moonWrap);
+    // var shiftX = e.pageX - coords.left;
+    // var shiftY = e.pageY - coords.top;
+
+    // moonWrap.style.position = 'absolute';
+    // document.body.appendChild(moonWrap);
+    // moveAt(e);
+
+    // moonWrap.style.zIndex = 1000; // над другими элементами
+
+    // function moveAt(e) {
+    //     moonWrap.style.left = (e.pageX - shiftX)*2 + 'px';
+    //     moonWrap.style.top = e.pageY - shiftY + 'px';
+    //     console.log(e.pageX - shiftX)
+    // }
+
+    // document.onmousemove = function(e) {
+    //     moveAt(e);
+    // };
+
+    // moonWrap.onmouseup = function() {
+    //     document.onmousemove = null;
+    //     moonWrap.onmouseup = null;
+    // };
+
+    // }
+
+    // moonWrap.ondragstart = function() {
+    // return false;
+    // };
+
+    // function getCoords(elem) {   // кроме IE8-
+    //     var box = elem.getBoundingClientRect();
+    //     // console.log(box.left + pageXOffset)
+    //     return {
+    //         top: box.top + pageYOffset,
+    //         left: box.left + pageXOffset
+    //     };
+    // }
+
+
+
 
 
     // let i = 0;
