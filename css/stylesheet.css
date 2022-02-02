@@ -263,8 +263,8 @@ body {
   z-index: 6;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-47%);
+          transform: translateX(-50%) translateY(-47%);
 }
 
 .cload1 {
@@ -518,10 +518,10 @@ body {
   height: 230px;
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 44%;
   z-index: 10;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-46%);
+          transform: translateX(-50%) translateY(-46%);
   pointer-events: none;
   opacity: 0;
   z-index: 20;
@@ -546,8 +546,8 @@ body {
     opacity: 0.5;
   }
   99% {
-    width: 963px;
-    height: 930px;
+    width: 1063px;
+    height: 1030px;
     opacity: 1;
   }
   100% {
@@ -568,8 +568,8 @@ body {
     opacity: 0.5;
   }
   99% {
-    width: 963px;
-    height: 930px;
+    width: 1063px;
+    height: 1030px;
     opacity: 1;
   }
   100% {
@@ -657,7 +657,7 @@ body {
   }
 
   .extra-light {
-    top: 45%;
+    top: 42%;
   }
 }
 @media screen and (max-height: 707px) {
@@ -665,13 +665,24 @@ body {
     bottom: auto;
     top: 45%;
   }
+
+  .moon_wrap.moon_down.moon_center {
+    -webkit-transform: translateX(-50%) translateY(-51%);
+            transform: translateX(-50%) translateY(-51%);
+  }
 }
 @media screen and (max-width: 760px) {
   .cload1 {
-    width: 140%;
+    width: 120%;
+    height: auto;
   }
 
   .cload3 {
-    width: 140%;
+    width: 120%;
+    height: auto;
+  }
+
+  .logo-link {
+    z-index: 999;
   }
 }
