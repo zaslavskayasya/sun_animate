@@ -191,6 +191,13 @@ body{
 }
 
 
+.moon_center.hide_it{
+    opacity: 0;
+}
+.sun_center.hide_it{
+    opacity: 0;
+}
+
 
 // --------- cloads ----------
 
@@ -407,8 +414,7 @@ body{
 
 //// LIGHT
 
-.extra-light.visible{
-    
+.extra-light.visible{    
     animation: animateLight 1.5s 0.5s forwards;    
     img{
         // transition: all ease-in-out 0.3s 1s;        
@@ -472,6 +478,9 @@ body{
     }
     
 }
+
+
+
 
 
 

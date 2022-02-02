@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Stage1</title>
 	<link href="images/favicon.ico" rel="icon" />
-	<meta http-equiv="cache-control" content="no-cache" />
+	<!-- <meta http-equiv="cache-control" content="no-cache" /> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,8 +127,6 @@
         line2.classList.add("draw");
     }
 
-
-
     // Логотип
 
     let logo = document.querySelector(".logo-link");
@@ -146,71 +144,15 @@
     setTimeout(logoShow, 600);
 
 
-    // var moonWrap = document.getElementById('moonWrap');
-
-    // moonWrap.onmousedown = function(e) {
-
-    // var coords = getCoords(moonWrap);
-    // var shiftX = e.pageX - coords.left;
-    // var shiftY = e.pageY - coords.top;
-
-    // moonWrap.style.position = 'absolute';
-    // document.body.appendChild(moonWrap);
-    // moveAt(e);
-
-    // moonWrap.style.zIndex = 1000; // над другими элементами
-
-    // function moveAt(e) {
-    //     moonWrap.style.left = (e.pageX - shiftX)*2 + 'px';
-    //     moonWrap.style.top = e.pageY - shiftY + 'px';
-    //     console.log(e.pageX - shiftX)
-    // }
-
-    // document.onmousemove = function(e) {
-    //     moveAt(e);
-    // };
-
-    // moonWrap.onmouseup = function() {
-    //     document.onmousemove = null;
-    //     moonWrap.onmouseup = null;
-    // };
-
-    // }
-
-    // moonWrap.ondragstart = function() {
-    // return false;
-    // };
-
-    // function getCoords(elem) {   // кроме IE8-
-    //     var box = elem.getBoundingClientRect();
-    //     // console.log(box.left + pageXOffset)
-    //     return {
-    //         top: box.top + pageYOffset,
-    //         left: box.left + pageXOffset
-    //     };
-    // }
-
-
-
-
-
-    // let i = 0;
-    // let txt = 'Celestial'; /* Текст */
-    // let speed = 80; /* Скорость/длительность эффекта в миллисекундах */
-
-    // function typeWriter() {
-    // if (i < txt.length) {
-    //         document.getElementById("typo_text").innerHTML += txt.charAt(i);
-    //         i++;
-    //         setTimeout(typeWriter, speed);
-    //     }
-    // }
-
-    // setTimeout(typeWriter, 4800);
-
     let startConnectTrigger = document.getElementById("typo_text");
-
     let shine = document.getElementById("extra-light");
+
+
+
+    function hide_elems() {
+        moon.classList.add("hide_it");
+        sun.classList.add("hide_it");    
+    }
 
     startConnectTrigger.addEventListener("click", function(){
         console.log('startAnimation');
@@ -222,9 +164,8 @@
         line.classList.add("hide_this_soft"); 
         line2.classList.add("hide_this_soft");   
         shine.classList.add("visible");
-       
-
-
+        setTimeout(hide_elems, 1200);
+      
     } )
 
 

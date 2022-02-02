@@ -267,6 +267,14 @@ body {
           transform: translateX(-50%) translateY(-47%);
 }
 
+.moon_center.hide_it {
+  opacity: 0;
+}
+
+.sun_center.hide_it {
+  opacity: 0;
+}
+
 .cload1 {
   position: absolute;
   width: 2500px;
