@@ -184,8 +184,8 @@ body {
 .sun-block.sun_up.sun_center {
   bottom: 16%;
   z-index: 5;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease 0.7s;
+  transition: all ease 0.7s;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
@@ -261,8 +261,8 @@ body {
 .moon_wrap.moon_down.moon_center {
   top: 50%;
   z-index: 6;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
   -webkit-transform: translateX(-50%) translateY(-47%);
           transform: translateX(-50%) translateY(-47%);
 }
@@ -539,8 +539,8 @@ body {
 }
 
 .extra-light.visible {
-  -webkit-animation: animateLight 1.5s 0.5s forwards;
-          animation: animateLight 1.5s 0.5s forwards;
+  -webkit-animation: animateLight 1s 0.4s forwards;
+          animation: animateLight 1s 0.4s forwards;
 }
 @-webkit-keyframes animateLight {
   0% {

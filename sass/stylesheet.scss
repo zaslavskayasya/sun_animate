@@ -125,7 +125,7 @@ body{
 .sun-block.sun_up.sun_center{
     bottom: 16%;
     z-index: 5;
-    transition: all ease 1s;
+    transition: all ease 0.7s;
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -186,7 +186,7 @@ body{
 .moon_wrap.moon_down.moon_center{ 
     top: 50%;
     z-index: 6;
-    transition: all ease 1s;
+    transition: all ease 0.8s;
     transform: translateX(-50%) translateY(-47%);
 }
 
@@ -415,7 +415,7 @@ body{
 //// LIGHT
 
 .extra-light.visible{    
-    animation: animateLight 1.5s 0.5s forwards;    
+    animation: animateLight 1s 0.4s forwards;    
     img{
         // transition: all ease-in-out 0.3s 1s;        
     }
